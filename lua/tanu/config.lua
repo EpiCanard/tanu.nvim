@@ -1,7 +1,12 @@
 local M = {}
 
 local default = {
-
+  hosts = {
+    default = {
+      url = "https://gitlab.com",
+      token = nil
+    }
+  }
 }
 
 M.config = default
