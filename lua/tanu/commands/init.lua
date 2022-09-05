@@ -1,5 +1,6 @@
 local http = require("tanu.request.http")
 local config = require("tanu.config")
+local git = require("tanu.git")
 local M = {}
 
 function M.setup()
@@ -14,6 +15,7 @@ function M.setup()
       local status, body = http.graphql(config.config.hosts.default, "query {currentUser {name}}")
       print(status)
       print(vim.inspect(body))
+      print(git.get_origin_url())
     end
   }
 end
