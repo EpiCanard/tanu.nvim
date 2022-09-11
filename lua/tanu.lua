@@ -14,7 +14,7 @@ end
 
 local function check_dependencies()
   local deps_loaded = {
-    check_dependency("plenary", "https://github.com/nvim-lua/plenary.nvim")
+    check_dependency("plenary", "https://github.com/nvim-lua/plenary.nvim"),
   }
 
   local loaded = true

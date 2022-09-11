@@ -5,10 +5,8 @@ local M = {}
 
 function M.setup()
   vim.api.nvim_create_user_command("Tanu", function(opts)
-      require("tanu.commands").tanu(unpack(opts.fargs))
-    end,
-    {nargs="*"}
-  )
+    require("tanu.commands").tanu(unpack(opts.fargs))
+  end, { nargs = "*" })
 
   M.commands = {
     mr = function()
@@ -16,7 +14,7 @@ function M.setup()
       print(status)
       print(vim.inspect(body))
       print(git.get_origin_url())
-    end
+    end,
   }
 end
 
@@ -28,7 +26,6 @@ function M.tanu(subcmd)
   else
     M.commands[subcmd]()
   end
-
 end
 
 return M
