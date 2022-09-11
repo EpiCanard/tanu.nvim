@@ -1,18 +1,14 @@
 local M = {}
 
 local default = {
-  hosts = {
-    default = {
-      url = "https://gitlab.com",
-      token = nil,
-    },
-  },
+  default_remote = "origin",
+  hosts = {},
 }
 
-M.config = default
+M.values = default
 
 function M.setup(user_config)
-  M.config = vim.tbl_deep_extend("force", default, user_config or {})
+  M.values = vim.tbl_deep_extend("force", default, user_config or {})
 end
 
 return M
