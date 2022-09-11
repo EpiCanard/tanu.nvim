@@ -7,7 +7,7 @@ local function git(...)
   local job = Job:new({
     enable_recording = true,
     command = "git",
-    args = tbl.pack(...)
+    args = tbl.pack(...),
   })
   return job:sync()
 end

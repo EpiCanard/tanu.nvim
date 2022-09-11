@@ -11,12 +11,12 @@ function M.graphql(host, query, variables)
   local opts = {
     headers = {
       content_type = "application/json",
-      authorization = "Bearer " .. host.token
+      authorization = "Bearer " .. host.token,
     },
     raw_body = vim.fn.json_encode({
       query = query,
-      variables = variables
-    })
+      variables = variables,
+    }),
   }
   local resp = curl.post(url, opts)
 

@@ -4,9 +4,9 @@ local default = {
   hosts = {
     default = {
       url = "https://gitlab.com",
-      token = nil
-    }
-  }
+      token = nil,
+    },
+  },
 }
 
 M.config = default
